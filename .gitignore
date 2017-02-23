@@ -1,0 +1,6 @@
+/data/
+/hsweb/
+*.iml
+.idea
+target
+.DS_Store
