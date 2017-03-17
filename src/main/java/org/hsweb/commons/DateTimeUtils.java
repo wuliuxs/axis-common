@@ -51,6 +51,10 @@ public final class DateTimeUtils {
      * 年-月-日 小时:分钟:秒钟(yyyy-MM-dd HH:mm:ss)
      */
     public static final String YEAR_MONTH_DAY_HOUR_MINUTE_SECOND = "yyyy-MM-dd HH:mm:ss";
+    /**
+     * 年月日小时分钟(yyyyMMddHHmm)
+     */
+    public static final String YEAR_MONTH_DAY_HOUR_MINUTE_SIMPLE = "yyyyMMddHHmm";
 
     /**
      * 年月日小时分钟秒钟(yyyyMMddHHmmss)
