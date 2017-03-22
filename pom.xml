@@ -13,6 +13,7 @@
         <project.build.locales>zh_CN</project.build.locales>
         <project.build.jdk>1.8</project.build.jdk>
         <junit.version>4.11</junit.version>
+        <slf4j.version>1.7.21</slf4j.version>
     </properties>
 
     <developers>
@@ -96,6 +97,12 @@
             <artifactId>pinyin4j</artifactId>
             <version>2.5.0</version>
             <optional>true</optional>
+        </dependency>
+        <!-- 日志包 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
         <!-- XML依赖包 -->
         <dependency>
