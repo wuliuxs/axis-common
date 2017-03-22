@@ -97,12 +97,6 @@
             <version>2.5.0</version>
             <optional>true</optional>
         </dependency>
-        <!-- 日志包 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.21</version>
-        </dependency>
         <!-- XML依赖包 -->
         <dependency>
             <groupId>dom4j</groupId>
