@@ -14,7 +14,7 @@ public class PoolManager<T> {
     private ConcurrentHashMap<String, T> concurrentHashMap;
 
     private PoolManager() {
-        this.concurrentHashMap = new ConcurrentHashMap<>(1);
+        this.concurrentHashMap = new ConcurrentHashMap<>(10);
     }
 
     public static PoolManager getInstance() {
