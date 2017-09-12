@@ -11,7 +11,7 @@ import java.io.File;
 public class AesTest extends TestCase {
     public void testEncrypt() throws Exception {
         String key = "Mary has one cat";
-        File inputFile = new File("C:\\Users\\Public\\Pictures\\Sample Pictures\\Hydrangeas.jpg");
+        File inputFile = new File("/Users/qingyuan/Pictures/pics/mm.JPG");
         File encryptedFile = new File("document.encrypted.jpg");
         File decryptedFile = new File("document.decrypted.jpg");
 
