@@ -21,7 +21,7 @@ import java.security.NoSuchAlgorithmException;
 public class Aes {
 
     private static final String ALGORITHM = "AES";
-    private static final String TRANSFORMATION = "AES";
+    private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
 
     public static void encrypt(String key, File inputFile, File outputFile)
             throws CryptoException {
@@ -57,5 +57,38 @@ public class Aes {
                 | IllegalBlockSizeException | IOException ex) {
             throw new CryptoException("Error encrypting/decrypting file", ex);
         }
+    }
+
+    /**
+     * 加密
+     * @param key 密钥
+     * @param msg 消息
+     * @return
+     */
+    public static byte[] encrypt(byte[] key, byte[] msg) {
+        return doCrypto(Cipher.ENCRYPT_MODE, key, msg);
+    }
+
+    /**
+     * 解密
+     * @param key 密钥
+     * @param msg 消息
+     * @return
+     */
+    public static byte[] decrypt(byte[] key, byte[] msg) {
+        return doCrypto(Cipher.DECRYPT_MODE, key, msg);
+    }
+
+    private static byte[] doCrypto(int cipherMode, byte[] key, byte[] msg) {
+        try {
+            Key secretKey = new SecretKeySpec(key, ALGORITHM);
+            Cipher cipher = Cipher.getInstance(TRANSFORMATION);
+            cipher.init(cipherMode, secretKey);
+            return cipher.doFinal(msg);
+
+        } catch (InvalidKeyException | IllegalBlockSizeException | BadPaddingException | NoSuchPaddingException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 import java.io.File;
 
 /**
- * Created by ft on 2017/4/25.
+ * Created by qingyuan on 17-4-25.
  */
 public class AesTest extends TestCase {
     public void testEncrypt() throws Exception {
@@ -27,5 +27,4 @@ public class AesTest extends TestCase {
     public void testDecrypt() throws Exception {
 
     }
-
 }
